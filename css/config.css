@@ -1,0 +1,48 @@
+/* ================================================================
+   CSS/CONFIG.CSS — Identidade Visual da Oficina
+   ================================================================
+   Este é o único arquivo que precisa ser editado para mudar
+   completamente as cores e a tipografia do site.
+   Altere --cor-primaria e toda a paleta muda automaticamente.
+   ================================================================ */
+
+:root {
+
+  /* ── PALETA AMARELO + PRETO ──────────────────────────────── */
+  --cor-primaria:       #F5C518;          /* Amarelo — botões, ícones, destaques */
+  --cor-primaria-dark:  #D4A800;          /* Hover da cor primária */
+  --cor-primaria-rgb:   245, 197, 24;     /* Usado em rgba() para glow/sombras */
+
+  /* ── FUNDOS ──────────────────────────────────────────────── */
+  --cor-bg-dark:        #0D0D0D;          /* Preto — fundo principal */
+  --cor-bg-medium:      #1A1A1A;          /* Cinza-preto — header, seções alternas */
+  --cor-bg-card:        #222222;          /* Cards de serviço */
+  --cor-bg-light:       #F0F0F0;          /* Seções claras (ex: Contato) */
+
+  /* ── TEXTOS ──────────────────────────────────────────────── */
+  --cor-texto-claro:    #FFFFFF;
+  --cor-texto-escuro:   #111111;
+  --cor-texto-sub:      #AAAAAA;          /* Texto secundário em fundos escuros */
+  --cor-texto-muted:    #666666;          /* Texto secundário em fundos claros */
+
+  /* ── BORDAS ──────────────────────────────────────────────── */
+  --cor-borda:          #2E2E2E;
+  --cor-borda-clara:    #DDDDDD;
+
+  /* ── ESPECIAIS ───────────────────────────────────────────── */
+  --cor-whatsapp:       #25D366;          /* Verde WhatsApp */
+
+  /* ── TIPOGRAFIA ──────────────────────────────────────────── */
+  /* Para trocar a fonte, altere os dois valores abaixo
+     e atualize o link do Google Fonts no <head> do index.html */
+  --fonte-titulo: 'Oswald', sans-serif;   /* Títulos e menu */
+  --fonte-corpo:  'Roboto', sans-serif;   /* Textos gerais */
+
+  /* ── DIMENSÕES FIXAS ─────────────────────────────────────── */
+  --info-bar-h:   38px;
+  --header-h:     70px;
+  --radius:       6px;
+  --transition:   0.3s ease;
+
+}
+

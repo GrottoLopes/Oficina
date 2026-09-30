@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Oficina mecânica especializada em alinhamento, balanceamento, troca de óleo, suspensão, motor e muito mais.">
+
+  <!-- Título preenchido pelo JS via config.js -->
+  <title>Oficina Mecânica</title>
+
+  <!-- Google Fonts: Oswald (títulos) + Roboto (corpo) -->
+  <!-- Para trocar a fonte, altere este link E as variáveis em css/config.css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Estilos do site -->
+  <link rel="stylesheet" href="css/config.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ╔══════════════════════════════════════════════════════╗
+       ║  SITE-TOP — Wrapper sticky (Info Bar + Header)      ║
+       ║  Manter ambos aqui garante que o header sobe        ║
+       ║  automaticamente quando a info-bar colapsa.         ║
+       ╚══════════════════════════════════════════════════════╝ -->
+  <div class="site-top" id="site-top">
+
+    <!-- ── INFO BAR ─────────────────────────────────────── -->
+    <!-- Some automaticamente nas seções Contato e Onde Estamos -->
+    <div id="info-bar" role="complementary" aria-label="Informações rápidas">
+      <div class="container info-bar__inner">
+
+        <span class="info-bar__item">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          <span id="ib-endereco">Carregando...</span>
+          <span id="ib-endereco"></span>
+        </span>
+
+        <span class="info-bar__sep" aria-hidden="true">|</span>
+
+        <span class="info-bar__item">
+          <i class="fas fa-phone" aria-hidden="true"></i>
+          <span id="ib-telefone">Carregando...</span>
+          <span id="ib-telefone"></span>
+        </span>
+
+        <span class="info-bar__sep" aria-hidden="true">|</span>
+
+        <span class="info-bar__item">
+          <i class="fas fa-clock" aria-hidden="true"></i>
+          <span id="ib-horario">Carregando...</span>
+          <span id="ib-horario"></span>
+        </span>
+
+      </div>
+    </div><!-- /info-bar -->
+
+    <!-- ── HEADER ────────────────────────────────────────── -->
+    <header id="main-header" role="banner">
+      <div class="header__inner">
+
+        <!-- Logo -->
+        <a href="#hero" class="header__logo" aria-label="Ir para o início">
+          <!-- Coloque logo.png em images/logo/ — se não existir, exibe o nome -->
+          <img src="images/logo/logo.png"
+               alt="Logo"
+               id="logo-img"
+               onerror="this.style.display='none'">
+          <span class="logo-nome" id="logo-nome"></span>
+        </a>
+
+        <!-- Navegação Desktop -->
+        <nav id="main-nav" aria-label="Menu principal">
+          <ul class="nav__list">
+            <li><a href="#servicos"      class="nav__link">Serviços</a></li>
+            <li><a href="#contato"       class="nav__link">Contato</a></li>
+            <li><a href="#onde-estamos"  class="nav__link">Onde Estamos</a></li>
+          </ul>
+        </nav>
+
+        <!-- Botão Hambúrguer (mobile) -->
+        <button id="hamburger"
+                class="hamburger"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="main-nav">
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+        </button>
+
+      </div>
+    </header><!-- /header -->
+
+  </div><!-- /site-top -->
+
+
+  <!-- ╔══════════════════════════════════════════════════════╗
+       ║  HERO / BANNER PRINCIPAL                            ║
+       ║  Imagem: images/hero/hero-bg.jpg                    ║
+       ╚══════════════════════════════════════════════════════╝ -->
+  <section id="hero" aria-label="Banner principal">
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__label">Bem-vindo à</p>
+      <h1 class="hero__title" id="hero-nome">Oficina</h1>
+      <p class="hero__slogan" id="hero-slogan">Qualidade e Confiança</p>
+      <a href="#servicos" class="btn btn--primary">
+        Ver Nossos Serviços
+        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════════════════╗
+       ║  SERVIÇOS — Carrossel horizontal infinito           ║
+       ║  Imagens: images/services/<nome>.jpg                ║
+       ╚══════════════════════════════════════════════════════╝ -->
+  <section id="servicos" aria-labelledby="servicos-titulo">
+    <div class="section-header">
+      <span class="section-label">NOSSOS SERVIÇOS</span>
+      <h2 class="section-title" id="servicos-titulo">O Que Fazemos</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- Carrossel -->
+    <div class="carousel-wrapper"
+         id="carousel-wrapper"
+         aria-label="Serviços em destaque"
+         title="Passe o mouse para pausar">
+      <div class="carousel-track" id="carousel-track" role="list">
+        <!-- Cards inseridos dinamicamente pelo JS (construirCarrossel) -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════════════════╗
+       ║  CONTATO                                            ║
+       ╚══════════════════════════════════════════════════════╝ -->
+  <section id="contato" aria-labelledby="contato-titulo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">ENTRE EM CONTATO</span>
+        <h2 class="section-title" id="contato-titulo">Fale Com a Gente</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Cards inseridos pelo JS (construirContato) -->
+      <div class="contato-cards" id="contato-cards"></div>
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════════════════╗
+       ║  ONDE ESTAMOS                                       ║
+       ║  Inclui: endereço, mapa, WhatsApp, horários         ║
+       ╚══════════════════════════════════════════════════════╝ -->
+  <section id="onde-estamos" aria-labelledby="onde-titulo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">LOCALIZAÇÃO</span>
+        <h2 class="section-title" id="onde-titulo">Onde Estamos</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="onde-grid">
+
+        <!-- Coluna Esquerda: Informações -->
+        <div class="onde-info">
+
+          <!-- Endereço -->
+          <div class="onde-block">
+            <h4><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Endereço</h4>
+            <p id="onde-rua"></p>
+            <p id="onde-bairro-cidade"></p>
+            <p id="onde-cep"></p>
+            <a id="onde-maps-link"
+               href="#"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="link-maps">
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i> Ver no Google Maps
+            </a>
+          </div>
+
+          <!-- WhatsApp(s) — preenchido pelo JS -->
+          <div class="onde-block" id="onde-telefones-block">
+            <h4><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</h4>
+            <div id="onde-telefones"></div>
+          </div>
+
+          <!-- Horários -->
+          <div class="onde-block">
+            <h4><i class="fas fa-clock" aria-hidden="true"></i> Horários</h4>
+            <p id="onde-semana"></p>
+            <p id="onde-sabado"></p>
+            <p id="onde-domingo"></p>
+          </div>
+
+        </div><!-- /onde-info -->
+
+        <!-- Coluna Direita: Mapa Google -->
+        <!-- O JS insere aqui um <iframe> (quando maps_embed estiver configurado)
+             ou um placeholder com link para o Google Maps. -->
+        <div class="onde-mapa" id="onde-mapa">
+          <!-- conteúdo inserido por js/main.js via construirOndeEstamos() -->
+        </div>
+
+      </div><!-- /onde-grid -->
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════════════════╗
+       ║  FOOTER                                             ║
+       ╚══════════════════════════════════════════════════════╝ -->
+  <footer id="rodape" role="contentinfo">
+    <div class="footer__grid container">
+      <div class="footer__brand">
+        <span class="footer__nome" id="footer-nome"></span>
+        <p class="footer__slogan" id="footer-slogan"></p>
+      </div>
+      <nav class="footer__nav" aria-label="Rodapé">
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+        <a href="#onde-estamos">Onde Estamos</a>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p id="footer-copy"></p>
+    </div>
+  </footer>
+
+
+  <!-- Scripts: config.js DEVE vir antes de main.js -->
+  <script src="config.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
+
