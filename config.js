@@ -26,7 +26,7 @@ const OFICINA = {
   /* ─── CONTATO ─────────────────────────────────────────────── */
   contato: {
     telefone1: "(11) 94598-3111",  // Número exibido no site
-    whatsapp1: "5500000000000",    // Apenas números com DDI (ex: 5511999999999)
+    whatsapp1: "55119465983111",    // Apenas números com DDI (ex: 5511999999999)
     telefone2: "",                 // Deixe "" para não exibir o 2º número
     whatsapp2: "5511945983111",
     email:     "contato@oficina.com.br"
