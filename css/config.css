@@ -9,9 +9,9 @@
 :root {
 
   /* ── PALETA AMARELO + PRETO ──────────────────────────────── */
-  --cor-primaria:       #F5C518;          /* Amarelo — botões, ícones, destaques */
-  --cor-primaria-dark:  #D4A800;          /* Hover da cor primária */
-  --cor-primaria-rgb:   245, 197, 24;     /* Usado em rgba() para glow/sombras */
+  --cor-primaria: #18f5a0;                /* Amarelo — botões, ícones, destaques #F5C518;*/
+  --cor-primaria-dark:  #00aa69;          /* Hover da cor primária #D4A800;*/
+  --cor-primaria-rgb:  0, 105, 65; /* 245, 197, 24;     /* Usado em rgba() para glow/sombras */
 
   /* ── FUNDOS ──────────────────────────────────────────────── */
   --cor-bg-dark:        #0D0D0D;          /* Preto — fundo principal */
